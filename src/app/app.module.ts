@@ -14,13 +14,20 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PeoplesComponent } from './components/peoples/peoples.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './pop-up/pop-up.component';
+import { PopupThankyouComponent } from './components/popup-thankyou/popup-thankyou.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserFoodComponent
+    UserFoodComponent,
+    PeoplesComponent,
+    PopUpComponent,
+    PopupThankyouComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +36,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSelectModule,MatFormFieldModule,
     BrowserAnimationsModule,
     MatGridListModule,MatIconModule,
-    MatButtonModule,MatMenuModule,FlexLayoutModule
+    MatButtonModule,MatMenuModule,FlexLayoutModule,
+    MatDialogModule
   
   ],
   providers: [],

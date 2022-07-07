@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupThankyouComponent } from '../popup-thankyou/popup-thankyou.component';
 
 
 @Component({
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-food.component.css']
 })
 export class UserFoodComponent implements OnInit {
+  @Input() selecteduser:any = ''
+  @Output() search: EventEmitter<any> = new EventEmitter<any>();
 
   // foods: any[] = [
   //   {
@@ -64,30 +68,33 @@ export class UserFoodComponent implements OnInit {
   foods = {
     Sunday:  [
       {
-        name:"Rice",
+        name:"White Rice",
         imageURL:'../../../assets/img/rice.jpg'
       },
+
       {
-        name:"Egg",
-        imageURL:'../../../assets/img/egg.jpg'
-      },
-      {
-        name:"Chicken",
+        name:"Chicken Curry",
         imageURL:'../../../assets/img/chicken.jpg'
       },
       {
-        name:"Beef",
-        imageURL:'../../../assets/img/beef.jpg'
-      }],
+        name:"Daal",
+        imageURL:'../../../assets/img/Daal.jpg'
+      },
+      {
+        name:"Vegetable",
+        imageURL:'../../../assets/img/Vegetable.jpg'
+      },
+],
     Monday:  [
       {
-        name:"Rice",
+        name:"White Rice",
         imageURL:'../../../assets/img/rice.jpg'
       },
       {
-        name:"Egg",
-        imageURL:'../../../assets/img/egg.jpg'
+        name:"Rui Fish",
+        imageURL:'../../../assets/img/Ruhi.jpg'
       },
+
       {
         name:"Chicken",
         imageURL:'../../../assets/img/chicken.jpg'
@@ -124,30 +131,33 @@ export class UserFoodComponent implements OnInit {
     ],
     WednesDay: [
       {
-        name:"Rice",
+        name:"White Rice",
         imageURL:'../../../assets/img/rice.jpg'
       },
       {
-        name:"Egg",
-        imageURL:'../../../assets/img/egg.jpg'
+        name:"Rui Fish",
+        imageURL:'../../../assets/img/Ruhi.jpg'
       },
+
       {
         name:"Chicken",
         imageURL:'../../../assets/img/chicken.jpg'
       },
       {
-        name:"Beef",
-        imageURL:'../../../assets/img/beef.jpg'
-      }],
+        name:"Vegetable",
+        imageURL:'../../../assets/img/Vegetable.jpg'
+      },
+      {
+        name:"Daal",
+        imageURL:'../../../assets/img/Daal.jpg'
+      },
+      ],
     Thursday:  [
       {
         name:"Rice",
         imageURL:'../../../assets/img/rice.jpg'
       },
-      {
-        name:"Egg",
-        imageURL:'../../../assets/img/egg.jpg'
-      },
+ 
       {
         name:"Chicken",
         imageURL:'../../../assets/img/chicken.jpg'
@@ -155,7 +165,12 @@ export class UserFoodComponent implements OnInit {
       {
         name:"Beef",
         imageURL:'../../../assets/img/beef.jpg'
-      }],
+      },
+      {
+        name:"Vegetable",
+        imageURL:'../../../assets/img/Vegetable.jpg'
+      },
+    ],
     Friday:  [
       {
         name:"Rice",
@@ -200,7 +215,7 @@ export class UserFoodComponent implements OnInit {
   isDisabled!: false;
 
 
-  constructor() { }
+  constructor(private dialogRef : MatDialog) { }
 
   ngOnInit(): void {
     this.getDayName()
@@ -242,6 +257,19 @@ export class UserFoodComponent implements OnInit {
     }
     console.log(this.myChoices)
   }
+  goBack() {
+    this.search.emit();
+  }
+  openDialog()
+  {
+    this.dialogRef.open(PopupThankyouComponent)
+    setTimeout(()=>{
+      this.dialogRef.closeAll(),this.goBack()
+    },2000)
+    
+  }
+
+  
 
 
 }

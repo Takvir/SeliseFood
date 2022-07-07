@@ -20,12 +20,19 @@
 .submit-btn {
 
   margin: 30px;
-  float: right;
+  /* float: right; */
   height: 50px;
   width: 320px;
   background-color: var(--seliseblue);
   color: white;
 
+}
+
+.user-greeting{
+  font-size: large;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
 }
 
 
@@ -61,4 +68,15 @@
     height: 36px !important;
     width: 36px !important;
     overflow: visible;
+  }
+
+  .btn-container{
+    width: 100%;
+  }
+  .back-btn{
+    color: var(--seliseblue);
+    margin: 30px;
+    /* float: right; */
+    height: 50px;
+    width: 150px;
   }

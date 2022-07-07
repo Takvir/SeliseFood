@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  time = new Date().toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
+  });
+
+  date = new Date().toDateString();
+
   users: string[] = [
     'Takvir Alam',
     'Jahid Mahmud',
@@ -18,7 +26,19 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
     this.users.sort()
+    
+    setInterval(() => {this.time = new Date().toLocaleString('en-US', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true
+    });
+    console.log(this.time);
+    this.date = new Date().toDateString();
+    
+    }, 1000);
+  
   }
 
 
