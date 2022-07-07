@@ -1,0 +1,25 @@
+<div class="container" *ngIf="!selecteduser">
+    <div class="greeting">
+        Welcome to Selise Food
+    </div>
+    <div class="user-dropdown" fxLayout="row" fxLayoutAlign="space-between center" >
+        <div fxFlex="90" style="overflow:scroll; height:980px;">
+            <div *ngFor="let user of filteredList">
+                <button mat-button (click)="selectUser(user)">{{user}} </button>
+            </div>
+    
+        </div>
+        <div fxFlex="10">
+            <div fxLayout="column" class="letters-container">
+                <div *ngFor="let letter of letters" class="letter">
+                   <button mat-button (click)="search(letter)">{{letter}}</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<div *ngIf="selecteduser">
+    <app-user-food [selecteduser]="selecteduser" (search) ="showList()"></app-user-food>
+</div>

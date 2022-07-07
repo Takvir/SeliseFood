@@ -47,6 +47,25 @@ export class UserFoodComponent implements OnInit {
         name:"Chicken",
         imageURL:'../../../assets/img/chicken.jpg',
         alt:'Rui Fish'
+      }],
+    Tuesday: [
+      {
+        name:"Rice",
+        imageURL:'../../../assets/img/rice.jpg'
+      },
+      {
+        name:"Egg",
+        imageURL:'../../../assets/img/egg.jpg',
+        alt:'Chicken'
+      },
+      {
+        name:"Chicken",
+        imageURL:'../../../assets/img/chicken.jpg',
+        alt:'Egg'
+      },
+      {
+        name:"Beef",
+        imageURL:'../../../assets/img/beef.jpg'
       },
       {
         name:"Daal",
@@ -55,30 +74,7 @@ export class UserFoodComponent implements OnInit {
       {
         name:"Vegetable",
         imageURL:'../../../assets/img/Vegetable.jpg'
-      },],
-
-    Tuesday: [
-      {
-        name:"Plain Polao",
-        imageURL:'../../../assets/img/Polao.jpg'
       },
-
-      {
-        name:"Chicken Roast",
-        imageURL:'../../../assets/img/chickenroast.jpg',
-        
-      },
-      {
-        name:"Egg",
-        imageURL:'../../../assets/img/egg.jpg',
-        
-      },
-      {
-        name:"Soft Drinks",
-        imageURL:'../../../assets/img/Softdrinks.jpg',
-        
-      },
-      
     ],
     WednesDay: [
       {
@@ -110,6 +106,7 @@ export class UserFoodComponent implements OnInit {
         name:"Rice",
         imageURL:'../../../assets/img/rice.jpg'
       },
+ 
       {
         name:"Chicken",
         imageURL:'../../../assets/img/chicken.jpg',
@@ -124,48 +121,42 @@ export class UserFoodComponent implements OnInit {
         name:"Vegetable",
         imageURL:'../../../assets/img/Vegetable.jpg'
       },
-    
-      {
-        name:"Daal",
-        imageURL:'../../../assets/img/Daal.jpg'
-      },
-
     ],
-    // Friday:  [
-    //   {
-    //     name:"Rice",
-    //     imageURL:'../../../assets/img/rice.jpg'
-    //   },
-    //   {
-    //     name:"Egg",
-    //     imageURL:'../../../assets/img/egg.jpg'
-    //   },
-    //   {
-    //     name:"Chicken",
-    //     imageURL:'../../../assets/img/chicken.jpg'
-    //   },
-    //   {
-    //     name:"Beef",
-    //     imageURL:'../../../assets/img/beef.jpg'
-    //   }],
-    // Saturday: [
-    //   {
-    //     name:"Rice",
-    //     imageURL:'../../../assets/img/rice.jpg'
-    //   },
-    //   {
-    //     name:"Egg",
-    //     imageURL:'../../../assets/img/egg.jpg',
-    //     alt:'Chicken'
-    //   },
-    //   {
-    //     name:"Chicken",
-    //     imageURL:'../../../assets/img/chicken.jpg'
-    //   },
-    //   {
-    //     name:"Beef",
-    //     imageURL:'../../../assets/img/beef.jpg'
-    //   }],
+    Friday:  [
+      {
+        name:"Rice",
+        imageURL:'../../../assets/img/rice.jpg'
+      },
+      {
+        name:"Egg",
+        imageURL:'../../../assets/img/egg.jpg'
+      },
+      {
+        name:"Chicken",
+        imageURL:'../../../assets/img/chicken.jpg'
+      },
+      {
+        name:"Beef",
+        imageURL:'../../../assets/img/beef.jpg'
+      }],
+    Saturday: [
+      {
+        name:"Rice",
+        imageURL:'../../../assets/img/rice.jpg'
+      },
+      {
+        name:"Egg",
+        imageURL:'../../../assets/img/egg.jpg',
+        alt:'Chicken'
+      },
+      {
+        name:"Chicken",
+        imageURL:'../../../assets/img/chicken.jpg'
+      },
+      {
+        name:"Beef",
+        imageURL:'../../../assets/img/beef.jpg'
+      }],
   }
 
   myChoices: any[] = []
